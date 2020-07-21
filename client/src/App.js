@@ -18,17 +18,18 @@ const useStyles = makeStyles({
 const App = () => {
     const classes = useStyles();
     const theme = useTheme();
+    console.log(theme);
     return (
-        <Router>
-            <div>
+        <div className={classes.primaryBg}>
+            <Router>
                 <ChatbotWidget />
                 <Switch>
                     <Route path="/join" component={Join} />
                     <Route path="/chat" component={Chat} />
                 </Switch>
-            </div>
 
-        </Router>
+            </Router>
+        </div>
     );
 }
 
