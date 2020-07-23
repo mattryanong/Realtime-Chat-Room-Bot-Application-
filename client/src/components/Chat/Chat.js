@@ -43,9 +43,9 @@ const Chat = ({ location }) => {
     useEffect(() => {
         socket.on('message', (message) => {
             //add any message sent to messages array
-            setMessages([...messages, message]);
+            setMessages(messages => [...messages, message]);
         })
-    }, [messages]);
+    }, [ ]);
 
     //function for sending messages
     const sendMessage = (event) => {

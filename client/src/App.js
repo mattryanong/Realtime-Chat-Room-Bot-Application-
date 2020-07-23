@@ -20,14 +20,13 @@ const App = () => {
     const theme = useTheme();
     return (
         <Router>
-            <div>
+            <div className={classes.primaryBg}>
                 <ChatbotWidget />
                 <Switch>
                     <Route path="/join" component={Join} />
                     <Route path="/chat" component={Chat} />
                 </Switch>
             </div>
-
         </Router>
     );
 }
