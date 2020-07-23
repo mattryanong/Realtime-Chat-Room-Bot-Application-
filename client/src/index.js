@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import 'typeface-montserrat';
 
 import App from './App'
 
@@ -27,7 +28,7 @@ const theme = createMuiTheme({
         }
     },
     typography: {
-        fontFamily: 'Monstserrat'
+        fontFamily: 'Montserrat'
     }
 });
 
