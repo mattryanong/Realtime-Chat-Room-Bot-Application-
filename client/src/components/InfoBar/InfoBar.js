@@ -1,8 +1,6 @@
 import React from 'react';
 
 import { makeStyles, AppBar, Toolbar, Typography } from '@material-ui/core'
-import closeIcon from '../../icons/closeIcon.png';
-import onlineIcon from '../../icons/onlineIcon.png';
 
 import './InfoBar.css';
 
@@ -22,15 +20,14 @@ const InfoBar = ({ room }) => {
     const classes = useStyles();
 
     return (
-        <AppBar position="static">
+        <AppBar position='fixed'>
             <div className={classes.root}>
-                <Toolbar>
+                <Toolbar position="fixed">
                     <Typography variant="h6" className={classes.title}>
                         {room}
                     </Typography>
                 </Toolbar>
             </div>
-
         </AppBar >
     );
 }
