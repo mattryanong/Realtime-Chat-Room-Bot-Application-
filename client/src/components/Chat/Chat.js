@@ -7,6 +7,7 @@ import './Chat.css'
 import InfoBar from '../InfoBar/InfoBar';
 import Input from '../Input/Input';
 import Messages from '../Messages/Messages';
+import { AppBar } from '@material-ui/core';
 
 let socket;
 
@@ -45,13 +46,13 @@ const Chat = ({ location }) => {
             //add any message sent to messages array
             setMessages(messages => [...messages, message]);
         })
-    }, [ ]);
+    }, []);
 
     //function for sending messages
     const sendMessage = (event) => {
         event.preventDefault();
 
-        if(message) {
+        if (message) {
             socket.emit('sendMessage', message, () => setMessage('')); //callback fn clears textbox when message is sent
         }
     }
@@ -61,9 +62,9 @@ const Chat = ({ location }) => {
     return (
         <div className="outerContainer">
             <div className="container">
-                <InfoBar room={room}/>
-                <Messages messages={messages} name={name}/>
-                <Input message={message} setMessage={setMessage} sendMessage={sendMessage} /> 
+                <InfoBar room={room} />
+                <Messages messages={messages} name={name} />
+                <Input message={message} setMessage={setMessage} sendMessage={sendMessage} />
             </div>
         </div>
     )
