@@ -2,16 +2,21 @@ import React, { useState, useEffect } from 'react';
 import queryString from 'query-string';
 import io from 'socket.io-client';
 
-// import './Chat.css'
+import './Chat.css'
 
 import InfoBar from '../InfoBar/InfoBar';
 import Input from '../Input/Input';
 import Messages from '../Messages/Messages';
 
-import { Box, Container } from '@material-ui/core';
+import { Box, Container, makeStyles } from '@material-ui/core';
 
 let socket;
 
+const useStyles = makeStyles((theme) => ({
+    root: {
+        background: '#F3F6FA'
+    }
+}));
 
 const Chat = ({ location }) => {
     const [name, setName] = useState('');
@@ -58,24 +63,30 @@ const Chat = ({ location }) => {
         }
     }
 
+
     console.log(message, messages);
 
+    const classes = useStyles();
+
     return (
-        <div style={{ width: '100%' }}>
-            <Container>
-                <Box display="flex" flexDirection="column" p={1} bgcolor="background.paper"justifyContent="space-between">
-                    <Box display="flex" p={2} bgcolor="background.paper" flexGrow={1}>
-                        <InfoBar room={room} />
+        <div className='outerContainer'>
+            <div className='container'>
+                {/* <Container> */}
+                    {/* <Box display="flex" flexDirection="column" p={1} bgcolor="background.paper" justifyContent="space-between">
+                        <Box display="flex" p={2} bgcolor="background.paper" flexGrow={1}> */}
+                            <InfoBar room={room} />
+                        {/* </Box>
+                        <Box flexGrow={1}> */}
+                            <Messages messages={messages} name={name} />
+                        {/* </Box>
+                        <Box flexGrow={1}> */}
+                            <Input message={message} setMessage={setMessage} sendMessage={sendMessage} />
+                        {/* </Box>
                     </Box>
-                    <Box flexGrow={1}>
-                        <Messages messages={messages} name={name} />
-                    </Box>
-                    <Box flexGrow={1}>
-                        <Input message={message} setMessage={setMessage} sendMessage={sendMessage} />
-                    </Box>
-                </Box>
-            </Container>
-        </div >
+                </Container > */}
+            </div>
+        </div>
+
     );
 }
 
