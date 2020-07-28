@@ -1,15 +1,45 @@
 .rw-conversation-container .rw-header {
-    background-color: linear-gradient(180deg, #325380 10.77%, #0A1D37 99.98%, #0A1D37 100%);
+    background: linear-gradient(180deg, #325380 10.77%, #0A1D37 99.98%, #0A1D37 100%);
+}
+
+.rw-conversation-container .rw-title {
+    font-family: Montserrat;
+}
+
+.rw-conversation-container .rw-messages-container {
+    background: #F3F6FA;
+}
+
+.rw-conversation-container .rw-messages-container .rw-message .rw-client {
+    font-family: Montserrat;
+    background: #33547F
+}
+
+.rw-conversation-container .rw-messages-container .rw-message .rw-response {
+    font-family: Montserrat;
+    background: #FFFFFF
+}
+
+.rw-conversation-container .rw-title {
+    font-family: Montserrat;
 }
 
 .rw-conversation-container .rw-client {
-    background-color: linear-gradient(180deg, #325380 10.77%, #0A1D37 99.98%, #0A1D37 100%);
+    background: linear-gradient(180deg, #325380 10.77%, #0A1D37 99.98%, #0A1D37 100%);
+}
+
+.rw-conversation-container .rw-sender .rw-send {
+    color: #33547F;
 }
 
 .rw-conversation-container .rw-close-button {
-    background-color: linear-gradient(180deg, #325380 10.77%, #0A1D37 99.98%, #0A1D37 100%);
+    background: linear-gradient(180deg, #325380 10.77%, #0A1D37 99.98%, #0A1D37 100%);
 }
 
 .rw-launcher{
-    background-color: linear-gradient(180deg, #325380 10.77%, #0A1D37 99.98%, #0A1D37 100%);
+    background: linear-gradient(180deg, #325380 10.77%, #0A1D37 99.98%, #0A1D37 100%);
+}
+
+.rw-conversation-container .rw-sender .rw-new-message {
+    font-family: Montserrat;
 }
