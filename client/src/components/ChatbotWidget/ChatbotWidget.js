@@ -1,9 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Widget } from 'rasa-webchat';
 import { confirmAlert } from 'react-confirm-alert'; // Import
 import 'react-confirm-alert/src/react-confirm-alert.css'; // Import css
 import { useHistory } from 'react-router-dom';
 import { Typography, Button } from '@material-ui/core';
+
+import './ChatbotWidget.css'
 
 
 function ChatbotWidget() {
@@ -11,7 +13,7 @@ function ChatbotWidget() {
     const history = useHistory();
 
     return (
-        <div>
+        <div className="webchat">
             <Widget
                 initPayload={"Hello!"}
                 socketUrl={"http://localhost:5005"}
@@ -19,6 +21,7 @@ function ChatbotWidget() {
                 customData={{ "language": "en" }} // arbitrary custom data. Stay minimal as this will be added to the socket
                 title={"Demo Rasa Webchat"}
                 // embedded={true}
+                showMessageDate
                 showFullScreenButton={true}
                 params={{ storage: "session" }}
                 onSocketEvent={{
@@ -44,18 +47,6 @@ function ChatbotWidget() {
                                     </div>
                                 )
                             }
-                            // title: 'Were you satisfied with your service?',
-                            // buttons: [
-                            //     {
-                            //         label: 'Yes'
-                            //     },
-                            //     {
-                            //         label: 'Speak to an agent',
-                            //         onClick: () => {
-                            //             return(<Link to={`/join`}></Link>)
-                            //         }
-                            //     }
-                            // ]
                         });
                     }
                 }}

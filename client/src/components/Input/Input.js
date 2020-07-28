@@ -1,7 +1,5 @@
 import React from 'react';
 
-import './Input.css';
-
 import { makeStyles, TextField, Box, IconButton, AppBar } from '@material-ui/core';
 import SendIcon from '@material-ui/icons/Send';
 
