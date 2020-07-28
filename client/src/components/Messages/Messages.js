@@ -14,7 +14,6 @@ const Messages = ({ messages, name }) => (
                 <Message message={message} name={name} />
             </div>
         )}
-    </ScrollToBottom>
-);
+    </ScrollToBottom>);
 
 export default Messages;
