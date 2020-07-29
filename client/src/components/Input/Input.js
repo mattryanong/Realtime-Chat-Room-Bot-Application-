@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { makeStyles, TextField, Box, IconButton, AppBar } from '@material-ui/core';
+import { makeStyles, TextField, Box, IconButton } from '@material-ui/core';
 import SendIcon from '@material-ui/icons/Send';
 
 const useStyles = makeStyles((theme) => ({
@@ -20,8 +20,6 @@ const Input = ({ message, setMessage, sendMessage }) => {
     const classes = useStyles();
 
     return (
-        // <AppBar position="fixed" className={classes.appBar}>
-
         <form className={classes.root} noValidate autoComplete="off">
             <Box display="flex" p={1} bgcolor="background.paper">
                 <Box p={1} flexGrow={1}>
@@ -49,9 +47,6 @@ const Input = ({ message, setMessage, sendMessage }) => {
                 </Box>
             </Box>
         </form>
-
-        // </AppBar>
-
     );
 }
 

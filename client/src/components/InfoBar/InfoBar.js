@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { makeStyles, AppBar, Toolbar, Typography } from '@material-ui/core'
+import { makeStyles, Toolbar, Typography } from '@material-ui/core'
 
 import './InfoBar.css';
 
@@ -20,7 +20,6 @@ const InfoBar = ({ room }) => {
     const classes = useStyles();
 
     return (
-        // <AppBar position='fixed'>
         <div className={classes.root}>
             <Toolbar position="absolute">
                 <Typography variant="h6" className={classes.title}>
@@ -28,7 +27,6 @@ const InfoBar = ({ room }) => {
                 </Typography>
             </Toolbar>
         </div>
-        // </AppBar >
     );
 }
 
