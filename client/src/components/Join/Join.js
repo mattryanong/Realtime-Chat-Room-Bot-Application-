@@ -7,7 +7,6 @@ import './Join.css';
 const Join = () => {
     const [name, setName] = useState('');
     const [room, setRoom] = useState('');
-
     return (
         <Container maxWidth="sm">
             <Typography variant="h3" align="center" gutterBottom>Speak to an agent</Typography>

@@ -1,7 +1,7 @@
 .messageBox {
     background: #F3F3F3;
-    border-radius: 20px;
-    padding: 5px 20px;
+    border-radius: 15px;
+    padding: 1px 20px;
     color: white;
     display: inline-block;
     max-width: 80%;
@@ -13,6 +13,7 @@
     float: left;
     font-size: 1.1em;
     word-wrap: break-word;
+    font-family: Montserrat;
   }
   
   .messageText img {
@@ -29,7 +30,7 @@
   .sentText {
     display: flex;
     align-items: center;
-    font-family: Helvetica;
+    font-family: Montserrat;
     color: #828282;
     letter-spacing: 0.3px;
   }
@@ -59,7 +60,7 @@
   }
   
   .backgroundBlue {
-    background: #2979FF;
+    background: #33547F;
   }
   
   .backgroundLight {
